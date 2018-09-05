@@ -92,7 +92,7 @@ void* draw_anim(void *v) {
 }
 
 int main(int argv, char **argc) {
-    pthread_t thr[3 * N], thr_draw;
+    pthread_t *thr, thr_draw;
     int h = 0, o = 0;
     int i = 0;
     int input;
@@ -112,6 +112,8 @@ int main(int argv, char **argc) {
 
     N = (get_screen_column() / 6) * 3;
     if ((argv > 1) && (input < N)) N = input;
+    
+    thr = malloc(sizeof(pthread_t) * N);
 
     pthread_create(&thr_draw, NULL, draw_anim, NULL);
 
