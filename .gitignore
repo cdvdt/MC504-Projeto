@@ -1,0 +1,20 @@
+# Ignore build output
+/bin/
+
+# Ignore object files
+*.o
+
+# Ignore editor and IDE files
+*.swp
+*.swo
+*.bak
+*~
+.vscode/
+.idea/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore dependency files (if any are generated)
+*.d
